@@ -1,0 +1,30 @@
+@keyframes pulse {
+  0% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.loading {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vw;
+  width: 100vh;
+  animation: pulse 1s infinite;
+}
+
+.loading p {
+  font-size: 15vw;
+}

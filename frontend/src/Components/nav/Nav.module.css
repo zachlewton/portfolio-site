@@ -1,0 +1,126 @@
+@keyframes sub {
+  0% {
+    height: 0;
+    overflow: hidden;
+  }
+
+  100% {
+  }
+}
+
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  padding-top: 1vw;
+  margin: 0;
+  background-color: white;
+
+  text-transform: lowercase;
+  height: 100vh;
+}
+.navList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 7.5vw;
+  color: #383838;
+
+  padding-left: 0;
+}
+.about {
+  margin-top: 14vh;
+}
+
+.name {
+  font-size: calc(10px + 1vw);
+  margin: 1vw;
+  margin-top: 0.5vw;
+  letter-spacing: 0.2vw;
+  color: #5c5c5c;
+}
+
+.navGroup {
+  color: #383838;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(2px + 1vw);
+  width: 100%;
+
+  font-weight: bold;
+
+  padding-bottom: 0.5vw;
+  cursor: pointer;
+}
+
+.subNav {
+  flex-direction: column;
+  display: flex;
+  color: #464646 !important;
+  font-weight: 550;
+
+  justify-content: center;
+  margin: 1vw;
+  font-size: calc(0px + 1vw);
+  animation: sub 0.5s ease-in-out;
+  height: calc(40px + 1vw);
+}
+
+.email {
+  cursor: copy;
+}
+
+.socialNav {
+  font-size: calc(15px + 1vw);
+  flex-direction: row;
+  display: flex;
+
+  animation: sub 0.5s ease-in-out;
+  height: calc(70px + 1vw);
+}
+
+.socialIcon svg {
+  color: #5c5c5c;
+}
+
+.socialNav a :hover {
+  color: #f1a226;
+}
+
+.subNav li {
+  margin: 0.2vw;
+}
+.selected {
+  color: #6d9679;
+}
+
+.flexbox {
+  text-align: center;
+}
+
+.profilePic {
+  width: 50%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+li:hover {
+  color: #f1a226;
+  transform: scale(1.1);
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
