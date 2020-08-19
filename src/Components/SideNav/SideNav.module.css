@@ -1,0 +1,165 @@
+@keyframes menu {
+  0% {
+    left: -100vw;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes sub {
+  0% {
+    height: 0;
+    overflow: hidden;
+  }
+
+  100% {
+  }
+}
+
+.sideNav {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  animation: menu 850ms ease-in-out;
+  background-color: whitesmoke;
+  position: fixed;
+  z-index: 1;
+
+  left: 0;
+
+  height: 100vh;
+}
+
+.page {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+}
+
+.burgerMenu {
+  position: fixed;
+  left: 0;
+  display: flex;
+}
+
+.burgerMenu button {
+  width: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-left: 0.5vw;
+  margin-top: 0vw;
+}
+
+.email {
+  cursor: copy;
+}
+.socialNav {
+  font-size: calc(15px + 1vw);
+  flex-direction: row;
+  display: flex;
+
+  animation: sub 0.5s ease-in-out;
+  height: calc(70px + 1vw);
+  justify-content: center;
+}
+
+.socialNav svg {
+  width: calc(20px + 1vw);
+  height: auto;
+
+  color: #5c5c5c;
+}
+
+.socialNav a :hover {
+  color: #f1a226;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  margin: 2vw;
+  padding-left: 0;
+  text-align: center;
+  margin-top: 35vw;
+
+  width: 50%;
+}
+
+.arrow {
+  display: flex;
+  width: 100%;
+}
+
+.arrow.span:hover {
+  transform: scale(1.1);
+}
+
+.name {
+  font-size: 3vw;
+  margin: 1vw;
+  margin-top: 0.5vw;
+}
+.navItem {
+  font-size: calc(36px + 1vw);
+  color: #383838;
+  font-weight: bold;
+
+  margin-bottom: 0.5vw;
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.subNav {
+  font-size: calc(15px + 1vw);
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  animation: sub 0.5s ease-in-out;
+  height: calc(70px + 1vw);
+  justify-content: center;
+  color: #464646;
+  font-weight: 550;
+}
+
+.subNavItem {
+  width: 100%;
+}
+
+.profilePic {
+  width: auto;
+  height: auto;
+
+  padding-bottom: 0.5vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  transition: transform 0.5s ease-in-out;
+}
+
+li:hover {
+  color: #f1a226;
+  transform: scale(1.1);
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
