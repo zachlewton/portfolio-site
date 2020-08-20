@@ -13,7 +13,7 @@ export class Posts extends Component {
 
   componentDidMount() {
     axios
-      .get("wp-json/wp/v2/posts?per_page=100")
+      .get("www.portfolioabby.com/wp-json/wp/v2/posts?per_page=100")
       .then((res) =>
         this.setState({
           posts: res.data,

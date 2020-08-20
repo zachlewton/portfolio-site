@@ -2,6 +2,10 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.16.1",
+    "npm": "6.13.4"
+  },
   "proxy": "http://www.portfolioabby.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -22,11 +26,10 @@
     "react-spring": "^8.0.27",
     "react-transition-group": "^4.4.1",
     "reactstrap": "^8.4.1",
-    "responsive-react": "^3.0.2",
-    "serve": "^11.3.2"
+    "responsive-react": "^3.0.2"
   },
   "scripts": {
-    "start": "serve -s build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
