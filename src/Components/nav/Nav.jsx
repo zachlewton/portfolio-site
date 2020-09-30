@@ -39,7 +39,7 @@ export default function Nav() {
               className={style.navItem}
               onClick={hidden ? () => sethidden(false) : () => sethidden(true)}
             >
-              Art / Design
+              Art / Fuck
             </li>
             {!hidden && (
               <div className={style.subNav}>
