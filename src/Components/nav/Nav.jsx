@@ -44,6 +44,7 @@ export default function Nav() {
             {!hidden && (
               <div className={style.subNav}>
                 <NavLink
+                  style={{ textDecoration: "none" }}
                   activeStyle={{
                     color: "#6d9679",
                   }}
@@ -52,6 +53,7 @@ export default function Nav() {
                   <li className={style.subNavItem}>Illustration</li>
                 </NavLink>
                 <NavLink
+                  style={{ textDecoration: "none" }}
                   activeStyle={{
                     color: "#6d9679",
                   }}
@@ -60,6 +62,7 @@ export default function Nav() {
                   <li className={style.subNavItem}>Graphic Design</li>
                 </NavLink>
                 <NavLink
+                  style={{ textDecoration: "none" }}
                   activeStyle={{
                     color: "#6d9679",
                   }}
@@ -72,6 +75,7 @@ export default function Nav() {
 
             <div className={style.navGroup}>
               <NavLink
+                style={{ textDecoration: "none" }}
                 activeStyle={{
                   color: "#6d9679",
                 }}
@@ -88,6 +92,7 @@ export default function Nav() {
                 </li>
               </NavLink>
               <NavLink
+                style={{ textDecoration: "none" }}
                 activeStyle={{
                   color: "#6d9679",
                 }}
@@ -106,6 +111,7 @@ export default function Nav() {
 
             <div className={style.about}>
               <NavLink
+                style={{ textDecoration: "none" }}
                 activeStyle={{
                   color: "#6d9679",
                 }}

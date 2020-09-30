@@ -31,7 +31,6 @@ export default class App extends Component {
   };
 
   render() {
-    console.log(this.state.active);
     return (
       <Router>
         <div className={style.app}>
@@ -49,8 +48,12 @@ export default class App extends Component {
                 scale={1}
                 onClick={() => this.setState({ active: !this.state.active })}
                 active={this.state.active}
+                marginTop="13px"
+                marginLeft="8px"
               />
             </div>
+
+            <h1 className={style.header}>abby lee</h1>
 
             {this.state.active && (
               <div className={style.sideNav}>

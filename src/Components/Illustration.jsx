@@ -3,6 +3,7 @@ import axios from "axios";
 import Post from "./Post/Post";
 import style from "./posts/Posts.module.css";
 import Loading from "./Loading/Loading.jsx";
+import FadeIn from "react-fade-in";
 
 export default class Illustration extends Component {
   state = {
@@ -13,12 +14,10 @@ export default class Illustration extends Component {
 
   componentDidMount() {
     axios
-      .get("wp-json/wp/v2/posts?categories=3")
+      .get("https://www.portfolioabby.com/wp-json/wp/v2/posts?categories=3")
       .then((res) => {
         const postsArray = [];
         res.data.map((post) => {
-          console.log(post);
-
           postsArray.push(post);
         });
 
@@ -32,21 +31,22 @@ export default class Illustration extends Component {
 
   render() {
     const { posts, isLoaded } = this.state;
-    console.log(this.state);
 
     if (isLoaded) {
       return (
         <div className={style.flexContainer}>
           {posts.map((post) => (
-            <Post
-              title={post.title.rendered}
-              description={post.content.rendered}
-              subtitle={post.acf.subtitle}
-              imageSrc={post.featured_media}
-              key={post.id}
-              categories={post.categories}
-              url={post.acf.video}
-            />
+            <FadeIn transitionDuration={900} delay={300}>
+              <Post
+                title={post.title.rendered}
+                description={post.content.rendered}
+                subtitle={post.acf.subtitle}
+                imageSrc={post.featured_media}
+                key={post.id}
+                categories={post.categories}
+                url={post.acf.video}
+              />
+            </FadeIn>
           ))}
         </div>
       );

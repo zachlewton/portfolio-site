@@ -9,14 +9,23 @@ body {
   overflow-x: hidden;
   text-transform: lowercase;
   letter-spacing: 1.5px;
+  background-color: #f6f6f6;
 }
 
 body {
   font-family: nimbus-sans, sans-serif;
 }
 
+a {
+  color: inherit;
+}
+
+.header {
+  font-size: 5vw;
+}
+
 .content {
-  margin-left: 15vw;
+  margin-left: 14vw;
 }
 
 .burgerMenu {

@@ -4,6 +4,8 @@ import Post from "../Post/Post";
 import style from "./Posts.module.css";
 import Loading from "../Loading/Loading";
 
+import FadeIn from "react-fade-in";
+
 export class Posts extends Component {
   state = {
     posts: [],
@@ -13,7 +15,7 @@ export class Posts extends Component {
 
   componentDidMount() {
     axios
-      .get("www.portfolioabby.com/wp-json/wp/v2/posts?per_page=100")
+      .get("https://www.portfolioabby.com/wp-json/wp/v2/posts?per_page=100")
       .then((res) =>
         this.setState({
           posts: res.data,
@@ -24,21 +26,22 @@ export class Posts extends Component {
   }
   render() {
     const { posts, isLoaded } = this.state;
-    console.log(this.state);
 
     if (isLoaded) {
       return (
         <div className={style.flexContainer}>
           {posts.map((post) => (
-            <Post
-              title={post.title.rendered}
-              description={post.content.rendered}
-              subtitle={post.acf.subtitle}
-              imageSrc={post.featured_media}
-              key={post.id}
-              categories={post.categories}
-              url={post.acf.video}
-            />
+            <FadeIn transitionDuration={900} delay={300}>
+              <Post
+                title={post.title.rendered}
+                description={post.content.rendered}
+                subtitle={post.acf.subtitle}
+                imageSrc={post.featured_media}
+                key={post.id}
+                categories={post.categories}
+                url={post.acf.video}
+              />
+            </FadeIn>
           ))}
         </div>
       );

@@ -8,7 +8,9 @@ export default class Post extends Component {
     imgUrl: "",
   };
   componentDidMount() {
-    const getImgUrl = axios.get(`wp-json/wp/v2/media/${this.props.imageSrc}`);
+    const getImgUrl = axios.get(
+      `https://www.portfolioabby.com/wp-json/wp/v2/media/${this.props.imageSrc}`
+    );
     Promise.all([getImgUrl]).then((res) => {
       this.setState({
         imgUrl: res[0].data.media_details.sizes.full.source_url,
@@ -24,7 +26,7 @@ export default class Post extends Component {
         ) : (
           <Video url={this.props.url} />
         )}
-        {console.log(this.props.url)}
+
         <div className={style.header}>
           <h1 className={style.title}>{this.props.title}</h1>
           <div
