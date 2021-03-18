@@ -11,13 +11,18 @@
 	min-height: 100vh;
 }
 
+img {
+	height: 45vw;
+}
+
 .about p {
-	max-width: 50vw;
-	font-size: calc(16px + 1vw);
+	max-width: 25vw;
+	font-size: calc(12px + 0.5vw);
 	margin: 1vw;
 	padding: 1vw;
-	text-align: center;
+	/* text-align: center; */
 	line-height: 1.7;
+	width: 50%;
 }
 
 @media screen and (max-width: 1024px) {
