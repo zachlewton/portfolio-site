@@ -50,7 +50,7 @@
 .navItem {
 	display: flex;
 	flex-direction: column;
-	font-size: calc(10px + 0.5vw);
+	font-size: calc(8px + 0.5vw);
 	width: 100%;
 	font-weight: normal;
 	padding-bottom: 0.5vw;
@@ -65,7 +65,7 @@
 
 	justify-content: center;
 	margin: 1vw;
-	font-size: calc(0px + 1vw);
+	font-size: calc(8px + 0.5vw);
 	animation: sub 0.5s ease-in-out;
 	height: calc(40px + 1vw);
 }
